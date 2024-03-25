@@ -240,14 +240,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
-body,
-html {
-  margin: 0;
-  padding: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--text-950);
-  background-color: var(--background-50);
-}
