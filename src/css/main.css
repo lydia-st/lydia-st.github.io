@@ -6,9 +6,95 @@ body,
 html {
   margin: 0;
   padding: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "JetBrains Mono", monospace;
   font-size: 16px;
   line-height: 1.5;
   color: var(--text-950);
   background-color: var(--background-50);
+  height: 500vh;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.topbar {
+  position: fixed;
+  top: 0.25rem;
+  left: 0.25rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+
+  gap: 0.5rem;
+
+  & a {
+    text-decoration: none;
+    color: var(--text-950);
+  }
+
+  & .topbar__part {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+
+    background: linear-gradient(
+      90deg,
+      var(--accent-700-40) 20%,
+      var(--accent-500-40) 80%
+    );
+    background-size: 200% 200%;
+    border: 2px solid var(--accent-500);
+
+    border-radius: 69420em;
+    user-select: none;
+    transition: 0.2s;
+
+    &:hover {
+      border: 2px solid var(--accent-700);
+      background-size: 100% 100%;
+      box-shadow: 0 0 0.5rem 0.25rem var(--accent-500-40);
+    }
+  }
+}
+
+.avatar-container {
+  img {
+    width: 2em;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+
+    transition: 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+    &:hover {
+      animation: spin 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+  p {
+    margin: 0;
+    margin-inline-start: 0.5rem;
+    margin-inline-end: 0.5rem;
+
+    font-size: 1rem;
+    font-weight: bolder;
+    color: var(--text-950);
+    transition: 0.2s;
+  }
 }
