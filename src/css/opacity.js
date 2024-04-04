@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
 /**
- * @file main.js
+ * @file opacity.js
  * @description This script generates CSS variables for different opacities from a CSS file.
  * @version 1.0.0
  * @license MIT
  * @example
- *    ./main.js -s ./variables.css -o ./variables2.css
- *    ./main.js --source ./variables.css --output ./variables2.css
+ *    ./opacity.js -s ./variables.css -o ./variables2.css
+ *    ./opacity.js --source ./variables.css --output ./variables2.css
  */
 
 const fs = require("fs");

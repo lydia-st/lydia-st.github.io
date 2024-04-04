@@ -1,0 +1,112 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link rel="stylesheet" href="css/boilerplate.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/profile-card.css" />
+    <meta name="description" content="" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="img/favicon.ico" sizes="any" />
+    <link rel="icon" href="img/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="img/icon.png" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <div class="profile-container">
+      <div class="profile-card">
+        <div class="profile-card__header">
+          <div class="profile-card__avatar">
+            <img src="img/me/trans-flag.webp" alt="avatar" />
+          </div>
+          <div class="profile-card__header-text">
+            <div class="profile-card__name">lydia</div>
+            <div class="profile-card__pronouns">
+              <img
+                class="profile-card__pronouns-flag"
+                src="https://emojiflags.avris.it/flags/Transgender.png"
+                alt="Transgender flag"
+              />
+              she/her
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-card__body">
+          <div class="profile-card__bio profile-card__section">
+            <h2 class="profile-card__section-header">about me</h2>
+
+            <p>
+              Hiii! I'm Lydia, a <span id="age">16</span>-year-old developer
+              from the UK. Currently, I'm learning my way around
+              <a href="https://www.rust-lang.org/">Rust</a> and
+              <a href="https://www.rust-lang.org/">Sycamore</a>, so I can make
+              React things but 'faster' and 'better' (I hope).
+            </p>
+          </div>
+          <div class="profile-card__section profile-card__links">
+            <h2 class="profile-card__section-header">links</h2>
+
+            <div class="profile-card__links-list">
+              <a
+                href="https://discord.com/users/377491995960016897"
+                title="Discord / @_lydia.s"
+              >
+                <i aria-hidden="true" class="nf nf-md-discord"></i>
+              </a>
+
+              <a href="https://gitlab.com/lydia-st/" title="GitLab / lydia-st">
+                <i aria-hidden="true" class="nf nf-seti-gitlab"></i>
+              </a>
+
+              <a href="https://github.com/lydia-st/" title="GitHub / lydia-st">
+                <i aria-hidden="true" class="nf nf-md-github"></i>
+              </a>
+
+              <a href="https://discuit.net/@lydia" title="Discuit / @lydia">
+                <i aria-hidden="true" class="nf nf-md-cookie"></i>
+              </a>
+
+              <a
+                href="https://twitter.com/_lydia_st"
+                title="Twitter / @_lydia_st"
+              >
+                <i aria-hidden="true" class="nf nf-md-twitter"></i>
+              </a>
+
+              <a
+                href="mailto:lydia-gh@murena.io"
+                title="Email / lydia-gh@murena.io"
+              >
+                <i aria-hidden="true" class="nf nf-md-email"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const age = document.getElementById("age");
+      const birthDate = new Date("2007-10-02");
+
+      const now = new Date();
+      const diff = now - birthDate;
+
+      const ageDate = new Date(diff);
+      age.textContent = Math.abs(ageDate.getUTCFullYear() - 1970).toString();
+    </script>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
