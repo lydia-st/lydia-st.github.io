@@ -115,35 +115,67 @@
   }
 }
 
-.profile-card__links-list {
+/*
+<li><a href="https://discord.com/users/377491995960016897" title="Discord / @_lydia.s">
+  <div class="profile-card__links-list-header">
+    <i class="nf nf-fa-discord"></i>
+    Discord / @_lydia.s
+  </div>
+  <div class="profile-card__links-list-description">
+    I'm most active on Discord, so feel free to add me!
+  </div>
+</a></li>
+*/
+
+ul.profile-card__links-list {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 0.5rem;
 
-  a {
+  li a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
     text-decoration: none;
-    color: var(--text-950);
 
-    background-color: var(--primary-400);
-    padding: 0.25rem;
+    padding: 0.5rem;
+    background: var(--primary-400);
+    border: 1px solid transparent;
     border-radius: 0.5rem;
-    min-width: 2rem;
-    text-align: center;
-
     transition: 0.25s;
+
+    .profile-card__links-list-header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.25rem;
+
+      font-weight: 700;
+      color: var(--text-950);
+
+      i {
+        font-size: 1.25rem;
+      }
+    }
+
+    .profile-card__links-list-description {
+      font-size: 0.9rem;
+      color: var(--text-900);
+    }
 
     &:hover,
     &:focus {
-      font-weight: 900;
-      color: var(--text-800);
-      background-color: var(--primary-200);
+      background: var(--primary-500);
+      border: 1px solid var(--primary-700-40);
     }
 
     &:active {
-      color: var(--text-950);
-      background-color: var(--primary-100);
-      box-shadow: 0 0 0.5rem 0.25rem var(--primary-100-30);
+      background: var(--primary-300);
+      border: 1px solid var(--primary-700);
     }
   }
 }
