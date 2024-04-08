@@ -16,11 +16,17 @@
 }
 
 .profile-card__header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
   display: flex;
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  background: var(--primary-300);
+  background: var(--primary-400-70);
+  /* BUG: Backdrop filter w/ position: sticky doesn't work on Firefox */
+  backdrop-filter: blur(8px) brightness(0.75);
   user-select: none;
 
   & > * {
@@ -115,18 +121,6 @@
   }
 }
 
-/*
-<li><a href="https://discord.com/users/377491995960016897" title="Discord / @_lydia.s">
-  <div class="profile-card__links-list-header">
-    <i class="nf nf-fa-discord"></i>
-    Discord / @_lydia.s
-  </div>
-  <div class="profile-card__links-list-description">
-    I'm most active on Discord, so feel free to add me!
-  </div>
-</a></li>
-*/
-
 ul.profile-card__links-list {
   padding: 0;
   list-style: none;
@@ -165,6 +159,42 @@ ul.profile-card__links-list {
     .profile-card__links-list-description {
       font-size: 0.9rem;
       color: var(--text-900);
+    }
+
+    &:hover,
+    &:focus {
+      background: var(--primary-500);
+      border: 1px solid var(--primary-700-40);
+    }
+
+    &:active {
+      background: var(--primary-300);
+      border: 1px solid var(--primary-700);
+    }
+  }
+}
+
+.profile-card__skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.5rem;
+
+  .profile-card__skill {
+    flex: 1 1 6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem;
+    background: var(--primary-400);
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    user-select: none;
+
+    transition: 0.25s;
+
+    i {
+      font-size: 1.25rem;
     }
 
     &:hover,

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title></title>
+    <title>Lydia • About Me</title>
     <link rel="stylesheet" href="css/boilerplate.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/profile-card.css" />
@@ -53,6 +53,71 @@
               <a href="https://www.rust-lang.org/">Sycamore</a>, so I can make
               React things but 'faster' and 'better' (I hope).
             </p>
+          </div>
+          <div class="profile-card__section profile-card__skills">
+            <h2 class="profile-card__section-header">(some) things i can do</h2>
+
+            <div class="profile-card__skills-grid">
+              <div class="profile-card__skill">
+                <i class="nf nf-dev-python"></i>
+                <span class="profile-card__skill-name">Python</span>
+              </div>
+
+              <div class="profile-card__skill">
+                <i class="nf nf-custom-cpp"></i>
+                <span class="profile-card__skill-name">C++</span>
+              </div>
+
+              <div class="profile-card__skill">
+                <i class="nf nf-seti-go2"></i>
+                <span class="profile-card__skill-name">Go</span>
+              </div>
+
+              <div class="profile-card__skill">
+                <i class="nf nf-dev-javascript"></i>
+                <span class="profile-card__skill-name">JavaScript</span>
+              </div>
+
+              <div class="profile-card__skill">
+                <i class="nf nf-md-language_typescript"></i>
+                <span class="profile-card__skill-name">TypeScript</span>
+              </div>
+
+              <div class="profile-card__skill">
+                <i class="nf nf-dev-rust"></i>
+                <span class="profile-card__skill-name">Rust</span>
+              </div>
+
+              <div class="profile-card__skill">
+                <i class="nf nf-dev-html5"></i>
+                <span class="profile-card__skill-name">HTML</span>
+              </div>
+
+              <div class="profile-card__skill">
+                <i class="nf nf-dev-css3"></i>
+                <span class="profile-card__skill-name">CSS</span>
+              </div>
+
+              <div class="profile-card__skill">
+                <i class="nf nf-dev-react"></i>
+                <span class="profile-card__skill-name">React</span>
+              </div>
+
+              <div class="profile-card__skill">
+                <i class="nf nf-fa-node_js"></i>
+                <span class="profile-card__skill-name">Node.js</span>
+              </div>
+
+              <div class="profile-card__skill">
+                <i class="nf nf-dev-git"></i>
+                <span class="profile-card__skill-name">Git</span>
+              </div>
+
+              <div class="profile-card__skill">
+                <i class="nf nf-dev-linux"></i>
+                <span class="profile-card__skill-name">Linux</span>
+              </div>
+            </div>
           </div>
           <div class="profile-card__section profile-card__links">
             <h2 class="profile-card__section-header">links</h2>
@@ -156,12 +221,94 @@
               </li>
             </ul>
           </div>
+          <div class="profile-card__section profile-card__system">
+            <h2 class="profile-card__section-header">system</h2>
+
+            <div class="profile-card__system-grid">
+              <h3>Specs</h3>
+
+              <div class="profile-card__system">
+                <i class="nf nf-dev-linux"></i>
+                <span class="profile-card__system-name">Arch Linux</span>
+              </div>
+
+              <div class="profile-card__system">
+                <i class="nf nf-fa-memory"></i>
+                <span class="profile-card__system-name">16GB RAM</span>
+              </div>
+
+              <div class="profile-card__system">
+                <i class="nf nf-oct-cpu"></i>
+                <span class="profile-card__system-name"
+                  >Intel Core i5-3570</span
+                >
+              </div>
+
+              <div class="profile-card__system">
+                <i class="nf nf-md-card"></i>
+                <span class="profile-card__system-name"
+                  >AMD Radeon RX 6400</span
+                >
+              </div>
+
+              <div class="profile-card__system">
+                <i class="nf nf-fa-hard_drive"></i>
+                <span class="profile-card__system-name">512GB SSD</span>
+              </div>
+
+              <div class="profile-card__system">
+                <i class="nf nf-fa-hard_drive"></i>
+                <span class="profile-card__system-name">256GB SSD</span>
+              </div>
+
+              <div class="profile-card__system">
+                <i class="nf nf-md-harddisk"></i>
+                <span class="profile-card__system-name">1TB HDD</span>
+              </div>
+
+              <h3>Software</h3>
+
+              <div class="profile-card__system">
+                <i class="nf nf-md-dock_window"></i>
+                <span class="profile-card__system-name">wm: SwayFX</span>
+              </div>
+
+              <div class="profile-card__system">
+                <i class="nf nf-dev-terminal"></i>
+                <span class="profile-card__system-name">term: Foot</span>
+              </div>
+
+              <div class="profile-card__system">
+                <i class="nf nf-linux-neovim"></i>
+                <span class="profile-card__system-name">editor: Neovim</span>
+              </div>
+
+              <div class="profile-card__system">
+                <i class="nf nf-dev-intellij"></i>
+                <span class="profile-card__system-name"
+                  >editor: JetBrains IDEs</span
+                >
+              </div>
+
+              <div class="profile-card__system">
+                <i class="nf nf-dev-firefox"></i>
+                <span class="profile-card__system-name">browser: Firefox</span>
+              </div>
+
+              <div class="profile-card__system">
+                <i class="nf nf-seti-shell"></i>
+                <span class="profile-card__system-name">shell: zsh</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <script>
       const age = document.getElementById("age");
+      const ageChip = document.getElementById("c-age");
+
       const birthDate = new Date("2007-10-02");
 
       const now = new Date();
@@ -169,6 +316,7 @@
 
       const ageDate = new Date(diff);
       age.textContent = Math.abs(ageDate.getUTCFullYear() - 1970).toString();
+      ageChip.textContent = `${age.textContent} y/o`;
     </script>
 
     <script src="js/app.js"></script>
